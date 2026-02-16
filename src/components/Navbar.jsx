@@ -1,7 +1,7 @@
 function Navbar(){
     return(
 
-         <nav className="bg-blue-600 text-white p-4 flex justify-between items-center fixed top-0 left-0 w-full z-50">
+      <nav className="bg-blue-600 text-white p-4 flex justify-between items-center fixed top-0 left-0 w-full z-50">
       <h1 className="text-xl font-bold">Smart Travel</h1>
 
       <div className="space-x-4">
