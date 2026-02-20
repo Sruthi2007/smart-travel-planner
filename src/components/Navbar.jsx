@@ -1,3 +1,5 @@
+
+import { Link } from "react-router-dom";
 function Navbar(){
     return(
 
@@ -5,10 +7,10 @@ function Navbar(){
       <h1 className="text-xl font-bold">Smart Travel</h1>
 
       <div className="space-x-4">
-        <button className="hover:underline">Login</button>
-        <button className="bg-white text-blue-600 px-4 py-1 rounded">
+        <Link to="/login" className="hover:underline">Login</Link>
+        <Link to="/register" className="bg-white text-blue-600 px-4 py-1 rounded">
           Sign Up
-        </button>
+        </Link>
       </div>
     </nav>
     );  
