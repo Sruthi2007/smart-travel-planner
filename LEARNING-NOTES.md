@@ -14,23 +14,21 @@
 - Made navbar sticky
 - Learned flexbox centering and screen height utilities
 
-.
-
-📘 Day 3 — React Router (Multi-Page Navigation)
-✅ What I Learned
+## Day 3
 
 Installed and used react-router-dom
-
 Implemented client-side routing in React
-
 Created multiple pages (Home, Login, Register, Dashboard)
-
 Configured routes using <Routes> and <Route>
-
 Used <BrowserRouter> to enable routing
-
 Navigated between pages using <Link>
-
 Understood route path matching (/ vs /home)
-
 Fixed import error by using named imports
+
+## Day 4
+
+✅ Build Login form
+✅ Build Register form
+✅ Understand controlled inputs
+✅ Use useState properly
+✅ Handle form submission
