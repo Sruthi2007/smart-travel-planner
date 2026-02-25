@@ -69,3 +69,15 @@ Without CORS, browser blocks requests.
   What is Middleware? Middleware = functions that run before request reaches route.
 
  --> "I built an Express server with modular routing, implemented middleware for JSON parsing and CORS, and created authentication endpoints that communicate with the React frontend using Axios."
+
+## Day 7 Goals
+
+
+✅ Create MongoDB Atlas account
+✅ Create cloud database
+✅ Connect MongoDB to backend
+✅ Create User model
+✅ Save users on register
+✅ Validate login from database
+
+--> "I connected MongoDB Atlas with Node.js using Mongoose, created user schema and models, implemented registration and login APIs, and connected them to a React frontend using Axios."
