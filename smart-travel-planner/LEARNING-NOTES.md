@@ -81,3 +81,43 @@ Without CORS, browser blocks requests.
 ✅ Validate login from database
 
 --> "I connected MongoDB Atlas with Node.js using Mongoose, created user schema and models, implemented registration and login APIs, and connected them to a React frontend using Axios."
+
+
+## Day 8
+
+✅ Password stored as hash
+✅ Login compares hash
+✅ Plain password never stored
+✅ Production-ready authentication base
+
+WHAT IS HASHING?
+
+Hashing converts:
+
+123456
+
+Into:
+
+$2b$10$k9uF3xZk...randomstring
+
+Important:
+
+It cannot be reversed
+
+It is one-way encryption
+
+Even you cannot see original password
+
+🧠 WHAT IS BCRYPT?
+
+bcrypt is a library that:
+
+✔ Hashes passwords
+✔ Adds salt automatically
+✔ Compares hashed passwords safely
+
+---> STEP 1 — Install bcrypt
+
+Inside backend:
+
+npm install bcrypt

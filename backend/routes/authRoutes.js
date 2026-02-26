@@ -1,33 +1,62 @@
+
 import express from "express";
 import User from "../models/User.js"; // Import the User model
+import bcrypt from "bcrypt"; // Import bcrypt for password hashing
+
 const router=express.Router();
+
 router.post("/login", async (req, res) => {
-  const { email, password } = req.body;
+  try {
+    const { email, password } = req.body;
 
-  const user = await User.findOne({ email });
+    // 1️⃣ Find user
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
 
-  if (!user) {
-    return res.status(404).json({ message: "User not found" });
+    // 2️⃣ Compare password
+    const isMatch = await bcrypt.compare(password, user.password);
+
+    if (!isMatch) {
+      return res.status(401).json({ message: "Invalid password" });
+    }
+
+    res.json({ message: "Login successful", user });
+
+  } catch (error) {
+    res.status(500).json({ message: "Server error" });
   }
-
-  if (user.password !== password) {
-    return res.status(401).json({ message: "Invalid password" });
-  }
-
-  res.json({ message: "Login successful", user });
 });
 
-router.post("/register",async(req,res)=>{
-  const {name,email,password}=req.body;
-   const newUser = new User({
-    name,
-    email,
-    password,
-  });
+router.post("/register", async (req, res) => {
+  try {
+    const { name, email, password } = req.body;
 
-  await newUser.save();
+    // 1️⃣ Check if user already exists
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ message: "User already exists" });
+    }
 
-  res.json({ message: "User registered successfully" });
+    // 2️⃣ Hash password
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // 3️⃣ Create new user
+    const newUser = new User({
+      name,
+      email,
+      password: hashedPassword,
+    });
+
+    // 4️⃣ Save to database
+    await newUser.save();
+
+    res.json({ message: "User registered successfully" });
+
+  } catch (error) {
+    res.status(500).json({ message: "Server error" });
+  }
 });
 
 export default router;
