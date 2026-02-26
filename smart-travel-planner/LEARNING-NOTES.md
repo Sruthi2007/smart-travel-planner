@@ -121,3 +121,42 @@ bcrypt is a library that:
 Inside backend:
 
 npm install bcrypt
+
+.
+
+## DAY 9 — JWT Authentication (Token-Based Auth)
+🧠 WHAT IS JWT?
+
+JWT = JSON Web Token
+
+It is:
+
+A secure string generated after login
+
+Contains encoded user data
+
+Signed with a secret key
+
+Sent to frontend
+
+Used to verify identity
+
+✅ Install jsonwebtoken
+✅ Generate token on login
+✅ Send token to frontend
+✅ Create auth middleware
+✅ Protect routes
+
+🧩 STEP 1 — Install JWT
+
+Inside backend:
+
+       npm install jsonwebtoken
+       
+🧩 STEP 2 — Add JWT Secret to .env
+
+Inside backend/.env:
+
+JWT_SECRET=my_super_secret_key_123
+
+⚠️ In real production, this must be long and random.
