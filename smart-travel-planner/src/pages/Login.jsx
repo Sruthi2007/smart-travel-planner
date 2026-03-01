@@ -10,14 +10,19 @@ function Login(){
 
   try {
     const response = await api.post("/login", {
-      email,
+      email,  
       password,
     });
 
-    console.log(response.data);
+    // ✅ Save token
+    localStorage.setItem("token", response.data.token);
+
     alert("Login successful!");
-  } catch (error) {
-    console.log(error);
+
+    // redirect later
+    window.location.href = "/dashboard";
+
+  } catch {
     alert("Login failed");
   }
 };

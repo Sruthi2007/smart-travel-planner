@@ -144,7 +144,7 @@ Used to verify identity
 ✅ Install jsonwebtoken
 ✅ Generate token on login
 ✅ Send token to frontend
-✅ Create auth middleware
+✅ Create auth middleware 
 ✅ Protect routes
 
 🧩 STEP 1 — Install JWT
@@ -152,7 +152,7 @@ Used to verify identity
 Inside backend:
 
        npm install jsonwebtoken
-       
+
 🧩 STEP 2 — Add JWT Secret to .env
 
 Inside backend/.env:
@@ -160,3 +160,22 @@ Inside backend/.env:
 JWT_SECRET=my_super_secret_key_123
 
 ⚠️ In real production, this must be long and random.
+
+DAY 9 CHECKLIST
+
+☑ jsonwebtoken installed
+☑ Token generated
+☑ Middleware created
+☑ Protected route working
+
+## Day 10 — Connect JWT to Frontend & Protect Dashboard 🔐
+
+🎯 DAY 10 GOALS
+
+By end of today:
+
+✅ Save JWT after login
+✅ Store token in localStorage
+✅ Send token with API requests
+✅ Protect Dashboard page
+✅ Redirect unauthorized users
