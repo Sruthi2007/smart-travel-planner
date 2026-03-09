@@ -1,3 +1,6 @@
+
+import { Link } from "react-router-dom";
+
 function Dashboard() {
 
   const handleLogout = () => {
@@ -14,6 +17,9 @@ function Dashboard() {
       >
         Logout
       </button>
+      <Link to="/create-trip" className="bg-blue-600 text-white px-4 py-2 rounded">
+        Create Trip
+      </Link>
     </div>
   );
 }

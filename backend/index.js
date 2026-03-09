@@ -4,6 +4,7 @@ import cors from "cors";
 import authRoutes from "./routes/authRoutes.js";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import tripRoutes from "./routes/tripRoutes.js";
 
 dotenv.config();     // Load environment variables from .env file
 
@@ -18,7 +19,10 @@ app.get("/",(req,res)=>{                    // Test route
     res.send("Server is running");
 });
 const PORT=5000;       // Define the port number
-app.use("/api", authRoutes);    // Use auth routes with /api prefix
+app.use("/api", authRoutes); 
+app.use("/api", tripRoutes); 
+
+// Use auth routes with /api prefix
 app.listen(PORT,()=>{               // Start the server
     console.log(`Server is running on port ${PORT}`);
 });

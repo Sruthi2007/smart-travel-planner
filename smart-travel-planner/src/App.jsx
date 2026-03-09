@@ -6,6 +6,7 @@ import Register from './pages/Register.jsx';
 import Dashboard from './pages/Dashboard.jsx';
 import { Routes, Route } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute.jsx';
+import CreateTrip from './pages/CreateTrip.jsx';
 
 function App() {
 return (
@@ -20,6 +21,7 @@ return (
       <Dashboard />
     </ProtectedRoute>
   } />
+  <Route path="/create-trip" element={<CreateTrip />} />
 </Routes>
     
     </div>

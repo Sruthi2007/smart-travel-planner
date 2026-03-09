@@ -179,3 +179,32 @@ By end of today:
 ✅ Send token with API requests
 ✅ Protect Dashboard page
 ✅ Redirect unauthorized users
+
+## DAY 11 GOALS
+
+✅ Decode JWT token
+✅ Fetch logged-in user profile
+✅ Create Auth Context
+✅ Global login state
+✅ Navbar reacts to login/logout
+
+We want:
+
+Token → Decode → User Data → Global State
+
+So every component knows the logged-in user.
+
+🧩 STEP 1 — Install jwt-decode (Frontend)
+
+Inside frontend:
+
+  -->  npm install jwt-decode
+
+This library reads token payload.
+
+##  Day-12 — Create Trip Feature (Full Implementation)
+
+✅ User can create a trip
+✅ Trip is stored in MongoDB
+✅ Trips belong to the logged-in user
+✅ Dashboard shows created trips
