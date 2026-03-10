@@ -39,4 +39,42 @@ router.get("/trips", authMiddleware, async (req, res) => {
 
 });
 
+// UPDATE TRIP
+router.put("/trips/:id", authMiddleware, async (req, res) => {
+
+  try {
+
+    const updatedTrip = await Trip.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+
+    res.json(updatedTrip);
+
+  } catch (error) {
+
+    res.status(500).json({ message: "Update failed" });
+
+  }
+
+});
+
+// DELETE TRIP
+router.delete("/trips/:id", authMiddleware, async (req, res) => {
+
+  try {
+
+    await Trip.findByIdAndDelete(req.params.id);
+
+    res.json({ message: "Trip deleted" });
+
+  } catch (error) {
+
+    res.status(500).json({ message: "Delete failed" });
+
+  }
+
+});
+
 export default router;

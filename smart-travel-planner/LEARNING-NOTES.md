@@ -208,3 +208,44 @@ This library reads token payload.
 ✅ Trip is stored in MongoDB
 ✅ Trips belong to the logged-in user
 ✅ Dashboard shows created trips
+
+## Day-13 — Trips Dashboard (Fetch & Display Trips)
+🎯 Goal of Day-13
+
+By the end of today:
+
+✅ Fetch trips from MongoDB
+✅ Show trips on Dashboard
+✅ Each trip appears as a card
+✅ User sees only their trips
+
+Flow:
+
+MongoDB → Express API → Axios → React Dashboard → Trip Cards
+
+.
+
+## Day-14 — Edit Trip & Delete Trip
+
+Today your app will support:
+
+✔ Edit a trip
+✔ Delete a trip
+✔ Update MongoDB
+✔ Dashboard auto refresh
+
+After today your Trip feature becomes production-level CRUD.
+
+.
+
+🧠 Architecture
+
+React Dashboard
+     ↓
+Edit/Delete Button
+     ↓
+Axios API
+     ↓
+Express Route
+     ↓
+MongoDB Update/Delete

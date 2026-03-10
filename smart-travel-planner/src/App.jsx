@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard.jsx';
 import { Routes, Route } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute.jsx';
 import CreateTrip from './pages/CreateTrip.jsx';
+import EditTrip from './pages/EditTrip.jsx';
 
 function App() {
 return (
@@ -22,6 +23,7 @@ return (
     </ProtectedRoute>
   } />
   <Route path="/create-trip" element={<CreateTrip />} />
+  <Route path="/edit-trip/:id" element={<EditTrip />} />
 </Routes>
     
     </div>

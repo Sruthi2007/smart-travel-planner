@@ -1,5 +1,6 @@
 import { useState } from "react";
 import api from "../services/api";
+import { useNavigate } from "react-router-dom";
 
 function CreateTrip() {
 
@@ -8,6 +9,7 @@ function CreateTrip() {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [notes, setNotes] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,6 +25,7 @@ function CreateTrip() {
       });
 
       alert("Trip created!");
+      navigate("/dashboard");
 
       setTitle("");
       setDestination("");
